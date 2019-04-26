@@ -57,6 +57,24 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    // res.send('<h1>Text here</h1>')
+    // res.send({ name: 'Paolo' })
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+    });
+});
+
+app.get('/bad', (req, res) => {
+    res.send({
+        errorMessage: 'Unable to handle request'
+    })
+});
+
+app.get('projects', (req, res) => {
+
+})
+
 
 const PORT = process.env.PORT || 3000;
 
